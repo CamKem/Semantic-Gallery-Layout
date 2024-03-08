@@ -1,0 +1,272 @@
+:root {
+    --Gallery-Grey: #999;
+    --Gallery-Mid-Grey: #676767;
+    --Gallery-Light-Grey: #CCC;
+    --Gallery-Dark-Grey: #333;
+    --Gallery-Blue: #476778;
+    --Basic-Mid-Grey: #5D5D5B;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: var(--Basic-Mid-Grey);
+    background-color: white;
+    min-width: 360px;
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--Basic-Mid-Grey);
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--Basic-Mid-Grey);
+}
+
+header {
+    background-color: var(--Gallery-Mid-Grey);
+    display: flex;
+    width: 360px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-container {
+    background-color: var(--Gallery-Grey);
+    display: flex;
+    width: 300px;
+    padding: 20px 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container > span {
+    color: var(--Gallery-Dark-Grey);
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.contact-details-container {
+    background-color: var(--Gallery-Grey);
+    display: flex;
+    width: 300px;
+    height: 164px;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.contact-details-container > h3 {
+    color: var(--Gallery-Dark-Grey);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+main > nav {
+    background-color: var(--Gallery-Mid-Grey);
+    display: flex;
+    width: 360px;
+    height: 210px;
+    padding: 20px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+main > nav > h2 {
+    color: var(--Gallery-Light-Grey);
+}
+
+main > nav > ul {
+    color: var(--Gallery-Light-Grey);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    gap: 15px;
+}
+
+main > nav > ul > li {
+    list-style: none;
+    font-size: 16px;
+}
+
+main > section {
+    background-color: var(--Gallery-Light-Grey);
+    display: flex;
+    width: 360px;
+    padding: 20px 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+main > section > h2 {
+    color: var(--Gallery-Dark-Grey);
+}
+
+.person-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 0 22px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+
+.person-card {
+    display: flex;
+    min-width: 225px;
+    max-width: 295px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.person-image {
+    width: 205px;
+    height: 205px;
+    border-radius: 5px;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.person-card-container > h3 {
+    color: var(--Gallery-Dark-Grey);
+    width: 205px;
+}
+
+.person-card > p {
+    width: 205px;
+    height: 51px;
+    color: var(--Gallery-Dark-Grey);
+}
+
+footer {
+    background-color: var(--Gallery-Mid-Grey);
+    display: flex;
+    height: 72px;
+    padding: 20px 96px 36px 95px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    color: var(--Gallery-Light-Grey);
+    text-align: center;
+}
+
+@media screen and (min-width: 960px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-wrapper {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    header {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        height: 100%;
+        padding: 25px;
+    }
+
+    main {
+        flex-direction: row;
+        /*align-items: flex-start;*/
+        align-items: stretch;
+        min-width: 100%;
+    }
+
+    main > nav {
+        width: 225px;
+        height: 766px;
+        padding: 20px;
+        flex: 0 1 auto;
+    }
+
+    main > section {
+        align-items: flex-start;
+        flex: 1 0 auto;
+    }
+
+    .person-card-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-around;
+        align-content: space-around;
+        grid-gap: 0 1vw;
+    }
+
+    /* Got it working with flex but couldn't enforce work out how to 3x2 */
+    /*.person-card-container {*/
+    /*    display: flex;*/
+    /*    justify-content: space-between;*/
+    /*    align-items: flex-start;*/
+    /*    align-content: flex-start;*/
+    /*    align-self: stretch;*/
+    /*    flex-wrap: wrap;*/
+    /*    margin-left: auto;*/
+    /*    !*margin: auto;*!*/
+    /*    gap: calc(100% / 3 - 20px) 0; !* 22px is the padding of the person-card *!*/
+    /*}*/
+
+    /*.person-card {*/
+    /*    max-width: 288px;*/
+    /*    flex: 1 0 0;*/
+    /*}*/
+
+    footer {
+        /* I would remove weird padding and just add this: */
+        /*width: 100%;*/
+        padding: 60px 319px 30px 319px;
+        gap: 10px;
+    }
+}

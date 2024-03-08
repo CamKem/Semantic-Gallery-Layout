@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+<div class="site-wrapper">
+    <header>
+        <div class="logo-container">
+            <span>COMPANY LOGO</span>
+        </div>
+        <div class="contact-details-container">
+            <h3>02 9988 7766 (p)</h3>
+            <h3>info@company.com (e)</h3>
+            <h3>www.company.com (w)</h3>
+        </div>
+    </header>
+    <main>
+        <nav>
+            <h2>Navigation</h2>
+            <ul>
+                <li>> Home</li>
+                <li>> About us</li>
+                <li>> Gallery</li>
+                <li>> Contact us</li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Gallery</h2>
+            <div class="person-card-container">
+                <script type="module">
+                    import {usePeople} from "./PersonCard.js";
+
+                    usePeople('.person-card-container');
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright 2222 Your Name</p>
+    </footer>
+</div>
+</body>
+</html>
