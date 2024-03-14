@@ -47,7 +47,7 @@ h3 {
 header {
     background-color: var(--Gallery-Mid-Grey);
     display: flex;
-    width: 360px;
+    min-width: 360px;
     padding: 10px;
     flex-direction: column;
     align-items: center;
@@ -57,7 +57,7 @@ header {
 .logo-container {
     background-color: var(--Gallery-Grey);
     display: flex;
-    width: 300px;
+    max-width: 300px;
     padding: 20px 25px;
     justify-content: center;
     align-items: center;
@@ -74,8 +74,8 @@ header {
 .contact-details-container {
     background-color: var(--Gallery-Grey);
     display: flex;
-    width: 300px;
-    height: 164px;
+    min-width: 300px;
+    min-height: 164px;
     padding: 20px;
     flex-direction: column;
     justify-content: center;
