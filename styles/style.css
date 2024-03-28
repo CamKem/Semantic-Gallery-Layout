@@ -5,6 +5,7 @@
     --Gallery-Dark-Grey: #333;
     --Gallery-Blue: #476778;
     --Basic-Mid-Grey: #5D5D5B;
+    --common-padding: 20px;
 }
 
 * {
@@ -13,13 +14,9 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
     color: var(--Basic-Mid-Grey);
     background-color: white;
     min-width: 360px;
@@ -29,7 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--common-padding);
 }
 
 h2 {
@@ -48,17 +45,17 @@ h3 {
     background-color: var(--Gallery-Mid-Grey);
     display: flex;
     min-width: 360px;
-    padding: 10px;
+    padding: var(--common-padding);
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--common-padding);
 }
 
 .logo-container {
     background-color: var(--Gallery-Grey);
     display: flex;
     max-width: 300px;
-    padding: 20px 25px;
+    padding: var(--common-padding);
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -77,15 +74,11 @@ h3 {
     display: flex;
     min-width: 300px;
     min-height: 164px;
-    padding: 20px;
+    padding: var(--common-padding);
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
 }
-
-/*.blank-list {*/
-/*    list-style: none;*/
-/*}*/
 
 .contact-details > address > ul {
     display: grid;
@@ -105,7 +98,6 @@ h3 {
     text-decoration: none;
     color: var(--Gallery-Dark-Grey);
     font-size: 20px;
-    font-weight: 400;
     font-style: normal;
 }
 
@@ -113,24 +105,21 @@ h3 {
     color: var(--Gallery-Blue);
 }
 
-.phone-number::after {
+.phone-number::after, .email::after, .website::after {
+    margin-left: 10px;
     width: 20px;
     height: 20px;
-    margin-left: 10px;
+}
+
+.phone-number::after {
     content: url('../assets/phone-icon.svg');
 }
 
 .email::after {
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
     content: url('../assets/email-icon.svg');
 }
 
 .website::after {
-    margin-left: 10px;
-    width: 20px;
-    height: 20px;
     content: url('../assets/website-icon.svg');
 }
 
@@ -142,10 +131,10 @@ nav {
     display: flex;
     min-width: 360px;
     min-height: 210px;
-    padding: 20px 30px;
+    padding: var(--common-padding);
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: var(--common-padding);
     color: var(--Gallery-Light-Grey);
 }
 
@@ -172,8 +161,6 @@ nav a {
     text-decoration: none;
     color: var(--Gallery-Light-Grey);
     font-size: 16px;
-    font-weight: 400;
-    font-style: normal;
 }
 
 nav a:hover {
@@ -195,12 +182,11 @@ main {
     background-color: var(--Gallery-Light-Grey);
     display: flex;
     width: 360px;
-    padding: 20px 15px;
+    padding: var(--common-padding);
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--common-padding);
 }
-
 
 main > h2 {
     color: var(--Gallery-Dark-Grey);
@@ -223,7 +209,7 @@ main > h2 {
     padding: 10px;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: var(--common-padding);
 }
 
 .person-image {
@@ -231,20 +217,13 @@ main > h2 {
     height: 205px;
     border-radius: 5px;
     background: white;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.person-card-container > h3 {
-    color: var(--Gallery-Dark-Grey);
+.person-card-container > h3, .person-card > p {
     width: 205px;
-}
-
-.person-card > p {
-    width: 205px;
-    height: 51px;
     color: var(--Gallery-Dark-Grey);
 }
 
@@ -276,7 +255,7 @@ main > h2 {
             "header header"
             "sidebar main"
             "footer footer";
-        gap: 20px;
+        gap: var(--common-padding);
         width: 100%;
         max-width: 1200px;
     }
@@ -290,7 +269,7 @@ main > h2 {
 
     .logo-container {
         height: 100%;
-        padding: 25px;
+        padding: var(--common-padding);
     }
 
     main {
@@ -317,7 +296,7 @@ main > h2 {
     }
 
     nav {
-        padding: 20px;
+        padding: var(--common-padding);
         min-width: 225px;
     }
 
