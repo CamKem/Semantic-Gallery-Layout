@@ -44,7 +44,7 @@ h3 {
     color: var(--Basic-Mid-Grey);
 }
 
-header {
+.site-header {
     background-color: var(--Gallery-Mid-Grey);
     display: flex;
     min-width: 360px;
@@ -64,14 +64,15 @@ header {
     gap: 10px;
 }
 
-.logo-container > span {
+.logo {
     color: var(--Gallery-Dark-Grey);
     text-align: center;
+    text-decoration: none;
     font-size: 50px;
     font-weight: 700;
 }
 
-.contact-details-container {
+.contact-details {
     background-color: var(--Gallery-Grey);
     display: flex;
     min-width: 300px;
@@ -80,29 +81,72 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+}
+
+/*.blank-list {*/
+/*    list-style: none;*/
+/*}*/
+
+.contact-details > address > ul {
+    display: grid;
+    justify-items: end;
+    vertical-align: middle;
     gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
 }
 
-.contact-details-container > h3 {
-    color: var(--Gallery-Dark-Grey);
-}
-
-main {
+.contact-details > address > ul > li {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 20px;
+    list-style: none;
+}
+
+.contact-details > address > ul > li > a {
+    text-decoration: none;
+    color: var(--Gallery-Dark-Grey);
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.contact-list li > a:hover {
+    color: var(--Gallery-Blue);
+}
+
+.phone-number::after {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    content: url('../assets/phone-icon.svg');
+}
+
+.email::after {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    content: url('../assets/email-icon.svg');
+}
+
+.website::after {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    content: url('../assets/website-icon.svg');
+}
+
+.sidebar {
+    background-color: var(--Gallery-Mid-Grey);
 }
 
 nav {
-    background-color: var(--Gallery-Mid-Grey);
     display: flex;
-    width: 360px;
+    min-width: 360px;
     min-height: 210px;
     padding: 20px 30px;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    color: var(--Gallery-Light-Grey);
 }
 
 nav > h2 {
@@ -110,7 +154,6 @@ nav > h2 {
 }
 
 nav > ul {
-    color: var(--Gallery-Light-Grey);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -121,9 +164,34 @@ nav > ul {
 nav > ul > li {
     list-style: none;
     font-size: 16px;
+    display: flex;
+    align-items: center;
 }
 
-main > section {
+nav a {
+    text-decoration: none;
+    color: var(--Gallery-Light-Grey);
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav a:hover {
+    color: var(--Gallery-Dark-Grey);
+}
+
+.chevron::before {
+    display: inline-block;
+    background-color: var(--Gallery-Light-Grey);
+    mask: url('../assets/chevron-right.svg') no-repeat 50% 50%;
+    -webkit-mask: url('../assets/chevron-right.svg') no-repeat 50% 50%;
+    content: "";
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+main {
     background-color: var(--Gallery-Light-Grey);
     display: flex;
     width: 360px;
@@ -134,7 +202,7 @@ main > section {
 }
 
 
-main > section > h2 {
+main > h2 {
     color: var(--Gallery-Dark-Grey);
 }
 
@@ -180,16 +248,16 @@ main > section > h2 {
     color: var(--Gallery-Dark-Grey);
 }
 
-footer {
+.site-footer {
     background-color: var(--Gallery-Mid-Grey);
     display: flex;
     height: 72px;
-    padding: 20px 96px 36px 95px;
+    min-width: 360px;
     justify-content: center;
     align-items: center;
 }
 
-footer > p {
+.site-footer > p {
     color: var(--Gallery-Light-Grey);
     text-align: center;
 }
@@ -202,12 +270,19 @@ footer > p {
     }
 
     .site-wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: 225px 3fr;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "footer footer";
+        gap: 20px;
         width: 100%;
         max-width: 1200px;
     }
 
-    header {
+    .site-header {
+        grid-area: header;
         width: 100%;
         flex-direction: row;
         justify-content: space-between;
@@ -224,17 +299,32 @@ footer > p {
         min-width: 100%;
     }
 
-    nav {
+    .sidebar {
+        grid-area: sidebar;
+        align-self: start;
+        width: 225px;
+    }
+
+    .content {
+        grid-area: main;
+    }
+
+    .sidebar {
         width: 225px;
         min-height: 100%;
         align-self: stretch;
-        padding: 20px;
         flex: 0 1 auto;
     }
 
-    main > section {
-        align-items: flex-start;
-        flex: 1 0 auto;
+    nav {
+        padding: 20px;
+        min-width: 225px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
 
     .person-card-container {
@@ -246,9 +336,8 @@ footer > p {
     }
 
     footer {
-        /* I would remove weird padding and just add this: */
-        /*width: 100%;*/
-        padding: 60px 319px 30px 319px;
+        grid-area: footer;
+        width: 100%;
         gap: 10px;
     }
 }
