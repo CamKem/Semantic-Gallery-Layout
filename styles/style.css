@@ -1,3 +1,4 @@
+/* Variables on root provide a way to set global variables that can be used throughout the stylesheet */
 :root {
     --Gallery-Grey: #999;
     --Gallery-Mid-Grey: #676767;
@@ -8,12 +9,14 @@
     --common-padding: 20px;
 }
 
+/* Reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -22,6 +25,7 @@ body {
     min-width: 360px;
 }
 
+/* Links */
 a {
     text-decoration: none;
     color: var(--Gallery-Blue);
