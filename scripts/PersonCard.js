@@ -2,7 +2,7 @@ function createPersonCard(name, peronSVG, description) {
     return `
         <article class="person-card">
             <div class="person-image">
-            ${peronSVG}
+                <img width="110" height="118" src="../assets/person.svg" alt="Person Name">
             </div>
             <h3>${name}</h3>
             <p>${description}</p>
@@ -10,7 +10,7 @@ function createPersonCard(name, peronSVG, description) {
     `;
 }
 
-function usePeople(containerSelector) {
+export function usePeople(containerSelector) {
     let people = [];
 
     for (let i = 1; i <= 6; i++) {
@@ -31,5 +31,3 @@ function usePeople(containerSelector) {
 
     return document.querySelector(containerSelector).innerHTML = personCardsHTML;
 }
-
-export { usePeople };
