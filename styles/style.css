@@ -67,6 +67,7 @@ h3 {
     padding: var(--common-padding);
 }
 
+/* Logo */
 .logo {
     color: var(--Gallery-Dark-Grey);
     text-align: center;
@@ -79,6 +80,7 @@ h3 {
     width: 100%;
 }
 
+/* Font Awesome Icon */
 .font-awesome-icon::before {
     display: inline-block;
     font-family: "FontAwesome", serif;
@@ -86,6 +88,7 @@ h3 {
     font-style: normal;
 }
 
+/* Screen Reader Only */
 .sr-only {
     position: absolute;
     left: -10000px;
@@ -96,6 +99,7 @@ h3 {
     overflow: hidden;
 }
 
+/* Contact Details */
 .contact-details {
     background-color: var(--Gallery-Grey);
     display: flex;
