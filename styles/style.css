@@ -60,23 +60,40 @@ h3 {
 .logo-container {
     background-color: var(--Gallery-Grey);
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     min-height: 160px;
     padding: var(--common-padding);
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-container > a {
-    width: 300px;
 }
 
 .logo {
     color: var(--Gallery-Dark-Grey);
     text-align: center;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 7em;
     font-weight: 700;
+    font-style: normal;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+.font-awesome-icon::before {
+    display: inline-block;
+    font-family: "FontAwesome", serif;
+    content: "\f390";
+    font-style: normal;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
 }
 
 .contact-details {
@@ -131,7 +148,7 @@ h3 {
     color: var(--Gallery-Blue);
 }
 
-.phone-number::after, .email::after, .website::after {
+.contact-list li::after {
     margin-left: 10px;
     width: 20px;
     height: 20px;
@@ -221,7 +238,7 @@ main > h2 {
 
 .person-card-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     align-content: flex-start;
     gap: 0 22px;
