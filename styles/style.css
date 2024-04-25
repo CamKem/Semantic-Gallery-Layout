@@ -107,22 +107,26 @@ h3 {
     align-items: flex-end;
 }
 
+/* Desktop Styles for Header */
 @media screen and (min-width: 660px) {
     .site-header {
         flex-direction: row;
         justify-content: space-between;
     }
 
+    /* Logo Container */
     .logo-container {
         max-width: 300px;
     }
 
+    /* Contact Details */
     .contact-details {
         max-width: 100%;
         min-width: 300px;
     }
 }
 
+/* Contact Details */
 .contact-details > address > ul {
     display: grid;
     justify-items: end;
@@ -131,12 +135,14 @@ h3 {
     grid-template-rows: repeat(3, 1fr);
 }
 
+/* Contact List */
 .contact-details > address > ul > li {
     display: flex;
     align-items: center;
     list-style: none;
 }
 
+/* Contact Icons */
 .contact-details > address > ul > li > a {
     text-decoration: none;
     color: var(--Gallery-Dark-Grey);
@@ -144,10 +150,12 @@ h3 {
     font-style: normal;
 }
 
+/* Contact Hover */
 .contact-list li > a:hover {
     color: var(--Gallery-Blue);
 }
 
+/* Contact Icons */
 .contact-list li::after {
     margin-left: 10px;
     width: 20px;
