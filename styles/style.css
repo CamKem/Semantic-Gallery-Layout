@@ -154,18 +154,22 @@ h3 {
     height: 20px;
 }
 
+/* Phone Icon */
 .phone-number::after {
     content: url('../assets/phone-icon.svg');
 }
 
+/* Email Icon */
 .email::after {
     content: url('../assets/email-icon.svg');
 }
 
+/* Social Media Icons */
 .website::after {
     content: url('../assets/website-icon.svg');
 }
 
+/* Sidebar */
 .sidebar {
     background-color: var(--Gallery-Mid-Grey);
     width: 100%;
