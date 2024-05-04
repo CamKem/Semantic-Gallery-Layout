@@ -171,6 +171,7 @@ h3 {
     width: 100%;
 }
 
+/* Nav */
 nav {
     display: flex;
     min-width: 360px;
@@ -182,10 +183,12 @@ nav {
     color: var(--Gallery-Light-Grey);
 }
 
+/* Nav > h2 */
 nav > h2 {
     color: var(--Gallery-Light-Grey);
 }
 
+/* Nav List */
 nav > ul {
     display: flex;
     flex-direction: column;
@@ -194,6 +197,7 @@ nav > ul {
     gap: 15px;
 }
 
+/* Nav List Item */
 nav > ul > li {
     list-style: none;
     font-size: 16px;
@@ -201,6 +205,7 @@ nav > ul > li {
     align-items: center;
 }
 
+/* Nav Link */
 nav a {
     text-decoration: none;
     color: var(--Gallery-Light-Grey);
