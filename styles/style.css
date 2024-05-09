@@ -207,10 +207,12 @@ nav a {
     font-size: 16px;
 }
 
+/* Nav Hover */
 nav a:hover {
     color: var(--Gallery-Dark-Grey);
 }
 
+/* Chevron Psuedo Element */
 .chevron::before {
     display: inline-block;
     background-color: var(--Gallery-Light-Grey);
@@ -222,6 +224,7 @@ nav a:hover {
     margin-right: 5px;
 }
 
+/* Main */
 main {
     background-color: var(--Gallery-Light-Grey);
     display: flex;
@@ -232,6 +235,7 @@ main {
     gap: var(--common-padding);
 }
 
+/* Main > h2 */
 main > h2 {
     color: var(--Gallery-Dark-Grey);
 }
