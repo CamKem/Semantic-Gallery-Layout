@@ -236,6 +236,7 @@ main > h2 {
     color: var(--Gallery-Dark-Grey);
 }
 
+/* Person Card Container */
 .person-card-container {
     display: flex;
     justify-content: space-evenly;
@@ -246,6 +247,7 @@ main > h2 {
     flex-wrap: wrap;
 }
 
+/* Person Card */
 .person-card {
     display: flex;
     min-width: 225px;
