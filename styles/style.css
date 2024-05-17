@@ -256,6 +256,7 @@ main > h2 {
     gap: var(--common-padding);
 }
 
+/* Person Image */
 .person-image {
     width: 205px;
     height: 205px;
@@ -266,11 +267,13 @@ main > h2 {
     align-items: center;
 }
 
+/* Person Card */
 .person-card-container > h3, .person-card > p {
     width: 205px;
     color: var(--Gallery-Dark-Grey);
 }
 
+/* Footer */
 .site-footer {
     background-color: var(--Gallery-Mid-Grey);
     display: flex;
