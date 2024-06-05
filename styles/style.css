@@ -286,6 +286,7 @@ main > h2 {
     text-align: center;
 }
 
+/* Desktop Styles */
 @media screen and (min-width: 960px) {
     body {
         display: flex;
@@ -316,11 +317,13 @@ main > h2 {
         justify-content: space-between;
     }
 
+    /*.logo-container {*/
     .logo-container {
         height: 100%;
         padding: var(--common-padding);
     }
 
+    /* main */
     main {
         flex-direction: row;
         align-self: flex-start;
