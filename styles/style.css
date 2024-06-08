@@ -296,6 +296,7 @@ main > h2 {
     .site-wrapper {
         display: grid;
         grid-template-columns: 225px 3fr;
+        /* use this for grid-template-areas */
         /*grid-template-areas:*/
         /*    "header header"*/
         /*    "sidebar main"*/
